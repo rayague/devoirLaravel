@@ -11,7 +11,17 @@ class Todo extends Model
 
     public $table = 'todos';
 
-    public $fillable = ['name', 'description', 'is_done'];
+    public $fillable = [
+        'name', 
+        'description',   
+        'roomName',
+    'price',
+    'bedNumber',
+    'maxAdult',
+    'maxChildAuthaurizied',
+    'attributs', 
+    'is_done'
+];
 
     protected $casts = [
         'is_done' => 'boolean'
@@ -24,8 +34,8 @@ class Todo extends Model
     public function getReadableTodoStatus()
     {
         if ($this->is_done) 
-            return 'Yes';
+            return 'Disponible';
 
-        return 'No';
+        return 'Non disponible';
     }
 }

@@ -17,6 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
+            $table->string('roomName');
+            $table->float('price');
+            $table->integer('bedNumber');
+            $table->integer('maxAdult');
+            $table->string('maxChildAUthaurizied');
+            $table->string('attributs');
             $table->boolean('is_done');
             $table->timestamps();
         });

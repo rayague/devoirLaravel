@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// ->middleware('auth')
+
 Route::prefix('todos')->group(function() {
     Route::get('/', [TodoController::class, 'index'])->name('todo.index');
     Route::get('/detail/{todo}', [TodoController::class, 'show'])->name('todo.show');
